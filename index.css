@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
+html {
+  font-family: "Gowun Batang", serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100%;
+  width: 100%;
+}
+
+h4 {
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* header style */
+header > div > img {
+  width: 8rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 100%;
+  height: 4rem;
+  padding: 10px 0px 10px 0px;
+  background-color: white;
+}
+
+header > nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0px;
+}
+
+header > nav > ul > li {
+  list-style: none;
+  font-size: 20px;
+  padding: 0px 15px 0px 15px;
+}
+
+.yes:hover {
+  color: #3db135;
+}
+
+.aladin:hover {
+  color: #df2e7f;
+}
+
+header > nav > ul > li > a {
+  color: #000000;
+  text-decoration: none;
+}
+
+#connects {
+  width: 128px;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#connects > a {
+  width: 35px;
+  padding: 0px 10px 0px 10px;
+}
+
+/* conetents styles */
+.contents {
+  margin: 2rem 1rem 2rem 1rem;
+  display: flex;
+  width: 60%;
+  min-height: 100%;
+  justify-content: center;
+  padding: 3rem;
+  border-radius: 5px;
+  flex-direction: column;
+}
+
+.book_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  margin: 1rem;
+  padding: 1rem;
+  font-family: "Nanum Gothic Coding", monospace;
+  flex-direction: column;
+}
+
+.book_info {
+  display: flex;
+  flex-direction: row;
+}
+
+.book_img > img {
+  width: 90%;
+  height: 90%;
+  padding: 1rem;
+}
+
+.book_text {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.buy_btn {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.buy_btn > button {
+  background-color: #497dca;
+  padding: 1rem 2.5rem;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+}
+
+.price {
+  color: #3db135;
+}

@@ -1,7 +1,7 @@
 import sqlite3
 
 
-con = sqlite3.Connection('dbs')
+con = sqlite3.Connection('dbms')
 cur = con.cursor()
 cur.execute("SELECT * FROM YesBook")
 row = cur.fetchall()

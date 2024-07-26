@@ -1,14 +1,15 @@
 import sqlite3
 import js
-
 bookData1, bookData2, bookData3, bookData4, bookData5, bookData6 = [], [], [], [], [], []
 con, cur = None, None
 sql = ""
-con = sqlite3.Connection("dbms")
+con = sqlite3.Connection("./test")
 cur = con.cursor()
-sql = "select * from YesBook"
+
 try :
-    cur.execute(sql)
+    print(cur)
+    cur.execute("commit;")
+    # cur.execute("select * from AladinBook;")
     while (True):
       row = cur.fetchone()
       if row == None:

@@ -3,22 +3,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="icon" href="res/k.png">
-    <link rel="stylesheet" href="index.css">    
-    <script defer type="module" src="https://pyscript.net/releases/2024.7.1/core.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
+    <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
     <title>북킷! - BookKit!</title>
 </head>
 <body>
-    <py-script>
-        import sqlite3
+    <py-script src="get.py">
+        <!-- import sqlite3
         import js
-
         bookData1, bookData2, bookData3, bookData4, bookData5, bookData6 = [], [], [], [], [], []
         con, cur = None, None
         sql = ""
         con = sqlite3.Connection("dbms")
         cur = con.cursor()
         sql = "select * from YesBook"
-        try :
             cur.execute(sql)
             while (True):
                 row = cur.fetchone()
@@ -54,9 +54,7 @@
                 book_list_div.appendChild(book_card)
                 print(sql)
             con.commit()
-            con.close()
-        except Exception as e:
-            print(e)
+            con.close() -->
 
     </py-script>
     <header>
@@ -82,6 +80,9 @@
             </a>
         </div>
     </header>
+    <div class="contents">
+
+    </div>
 
         <!-- <section class="book_card">
             <div class="book_info">
@@ -104,6 +105,5 @@
         
 
     </div>
-    <script src="index.js"/>
 </body>
 </html>

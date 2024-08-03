@@ -1,62 +1,13 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="icon" href="res/k.png">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
-    <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
     <title>북킷! - BookKit!</title>
 </head>
 <body>
-    <py-script src="get.py">
-        <!-- import sqlite3
-        import js
-        bookData1, bookData2, bookData3, bookData4, bookData5, bookData6 = [], [], [], [], [], []
-        con, cur = None, None
-        sql = ""
-        con = sqlite3.Connection("dbms")
-        cur = con.cursor()
-        sql = "select * from YesBook"
-            cur.execute(sql)
-            while (True):
-                row = cur.fetchone()
-                if row == None:
-                    break
-                bookData1.append(row[0])
-                bookData2.append(row[1])
-                bookData3.append(row[2])
-                bookData4.append(row[3])
-                bookData5.append(row[4])
-                bookData6.append(row[5])
-
-            book_list_div = js.document.getElementsByClassName('contents')
-
-            for index in cur:
-                num, title, author, introd, price, img_src = row
-                book_card = Element('section')
-                book_card.className = 'book_card'
-
-                img = Element('img')
-                img.className = 'book_img'
-                img.setAttribute('src', img_src)
-                book_card.appendChild(img)
-
-                    # book_text 생성
-                book_text = Element('div')
-                book_text.className = 'book_text'
-
-                title_element = Element('h3')
-                title_element.className = 'book_title'
-                title_element.textContent = title
-                book_text.appendChild(title_element)
-                book_list_div.appendChild(book_card)
-                print(sql)
-            con.commit()
-            con.close() -->
-
-    </py-script>
     <header>
         <div>
             <img src="res/title.png"/>
@@ -66,9 +17,7 @@
                 <li>
                     <a class="yes" href="https://www.yes24.com/Product/Category/BestSeller?categoryNumber=001&pageNumber=1&pageSize=24">Yes 24</a>
                 </li>
-                <li>
-                    <a class="aladin" href="https://www.aladin.co.kr/home/welcome.aspx">알라딘</a>
-                </li>
+
             </ul>
         </nav>
         <div id="connects">
@@ -81,19 +30,19 @@
         </div>
     </header>
     <div class="contents">
-
-    </div>
-
-        <!-- <section class="book_card">
+        <section class="book_card">
             <div class="book_info">
                 <div class="book_img">
                     <img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791170611561.jpg" alt="1">
                 </div>
                 <div class="book_text">
                     <h3 class="book_title">당신이 누군가를 죽였다.</h3>
-                    <div style="display: flex; justify-content: space-between;">
+                    <div style="display: flex; justify-content: space-between; flex-direction: column">
                         <h4 class="author">히가시노 게이고</h4>
-                        <h3 class="price">교보문고: 17,820원</h3>
+                        <div style="display: flex; justify-content: flex-end">
+                            <h4 class="ala_price p_item">yes24: 17,820원</h4>
+                            <h4 class="yes_price p_item">알라딘: 17,820원</h4>
+                        </div>
                     </div>
                     <p>“미스터리란 어떤 소설인가? 라는 질문을 들었을 때 이런 소설이다, 라고 대답할 수 있는 작품입니다.” _히가시노 게이고 일본 최고의 베스트셀러 작가 히가시노 게이고의 최신 장편소설『당신이...</p>
                     <div class="buy_btn">
@@ -101,9 +50,7 @@
                     </div>
                 </div>
             </div>
-        </section>-->
-        
-
+        </section>
     </div>
 </body>
 </html>

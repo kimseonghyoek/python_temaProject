@@ -47,7 +47,7 @@ def crawlingYes24BestSeller():
         for test in list_author:
             author.append(test.text)
 
-  # 가격          
+  # 가격
     for books in uls:
         list_price = books.select("li > div > div.item_info > div.info_row.info_price > strong > em")
         for test in list_price:
@@ -62,9 +62,7 @@ def crawlingYes24BestSeller():
     sql = ""
 
     for index in range(10):
-        data1=index+1;data2=title[index];data3=author[index];data4=introd;data5=price_result[index];
-       
-        print(sql)
+        data1=index+1;data2=title[index];data3=author[index];data4=introd;data5=price_result[index]
         try :
             sql = "INSERT INTO YesBook (book_num, title, author, introd, price, img_link) VALUES (?, ?, ?, ?, ?, ?)"
             cur.execute(sql, (data1, data2, data3, data4, data5, data6))

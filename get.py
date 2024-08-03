@@ -1,15 +1,16 @@
 import sqlite3
+## 쉘에서 임포트 후 sqlite3 확인
 import js
 bookData1, bookData2, bookData3, bookData4, bookData5, bookData6 = [], [], [], [], [], []
 con, cur = None, None
 sql = ""
-con = sqlite3.Connection("./test")
+con = sqlite3.Connection("dbms.db")
 cur = con.cursor()
 
 try :
     print(cur)
-    cur.execute("commit;")
-    # cur.execute("select * from AladinBook;")
+    con.commit();
+    con.executemany("select * from yesbook;", "commit;")
     while (True):
       row = cur.fetchone()
       if row == None:

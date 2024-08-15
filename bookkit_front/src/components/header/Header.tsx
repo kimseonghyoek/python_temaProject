@@ -9,8 +9,8 @@ const HeaderComponent = styled.div`
   justify-content: space-between;
   align-content: center;
   background-color: white;
-  padding: 0.6rem 0rem 0.6rem 0rem;
   height: 5rem;
+  margin-bottom: 1.5rem;
 
   nav {
     display: flex;
